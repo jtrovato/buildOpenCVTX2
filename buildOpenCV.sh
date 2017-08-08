@@ -36,7 +36,7 @@ cd build
 # Jetson TX2 
 cmake \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DBUILD_PNG=OFF \
     -DBUILD_TIFF=OFF \
     -DBUILD_TBB=OFF \
@@ -65,6 +65,7 @@ cmake \
     -DINSTALL_C_EXAMPLES=ON \
     -DINSTALL_TESTS=ON \
     -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \
+    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.2.0/modules
     ../
 
 # Consider using all 6 cores; $ sudo nvpmodel -m 2 or $ sudo nvpmodel -m 0
